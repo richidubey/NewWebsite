@@ -1,0 +1,85 @@
+
+body
+{
+	font-size:3vw;	/* Viweport(vw) is the size relative to width of the browser*/
+}
+
+
+h1
+{
+font-family: 'Indie Flower', cursive;
+
+text-align:center;
+
+position :absolute;
+top:50%;
+left:50%;
+
+
+    transform: translateX(-50%) translateY(-50%);
+    transition: color 1s;
+    
+} 
+
+
+h1:hover
+{
+	color:red;
+	
+}
+
+h2{
+	text-align:left;
+
+position :absolute;
+top:60%;
+left:50%;
+	opacity:0;
+    transform: translateX(-50%) translateY(-50%);
+    
+    transition: opacity 1s;
+      
+}
+
+h1:hover + h2 {
+
+	opacity:1;
+}
+
+@keyframes heartbeat
+{
+	0% 
+	{
+		transform: scale( .75 );
+	}
+	20% 
+	{
+		transform: scale( 1 );
+	}
+	40% 
+	{
+		transform: scale( .75 );
+	}
+	60% 
+	{
+		transform: scale( 1 );
+	}
+	
+	80% 
+	{
+		transform: scale( .75 );
+	}
+	100% 
+	{
+		transform: scale( .75 );
+	}
+}
+
+.heart
+{
+	height:auto;
+	width:3vw;
+	animation: heartbeat 1s infinite;	
+}
+
+
